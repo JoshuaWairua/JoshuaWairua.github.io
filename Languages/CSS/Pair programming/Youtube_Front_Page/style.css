@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page_container {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: chartreuse; */
+}
+
+.head {
+    margin: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.head a {
+    text-decoration: none;
+    color: black;
+}
+.topLeft {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.hamburgerIcon {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    /* background-color: saddlebrown; */
+    font-size: 2em;
+}
+
+.youtubeIcon {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+}
+
+.topMiddle {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    /* background-color: violet; */
+}
+
+.searchBar {
+    width: 80%;
+    height: auto;
+    margin: 5px;
+    /* background-color: teal; */
+}
+
+#search_bar  {
+    width: 100%;
+    height: 100%;
+}
+
+.searchIcon {
+    width: 18%;
+    height: auto;
+    margin: 5px;
+    /* background-color: rgb(19, 158, 40); */
+    font-size: 2em;
+}
+
+.topRight {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: tomato; */
+    font-size: 2em;
+}
+
+.box {
+    width: 20%;
+    height: auto;
+    margin: 5px;
+    /* background-color: yellow; */
+}
+
+/* main content */
+.main_content {
+    margin: 0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    /* background-color: brown; */
+}
+
+.menu_bar {
+    width: 20%;
+    height: 100%;
+    /* background-color: cadetblue; */
+    transition: all 1.25s ease-in-out;
+}
+
+.menu_bar:hover {
+    width: 5%;
+    font-size: 0.8em;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px;
+    text-align: start;
+    font-size: 1.2em;
+}
+
+nav ul li a {
+    color: rgb(53, 53, 53);
+    text-decoration: none;
+}
+.content_container {
+    width: 80%;
+    height: 100%;
+    background-color: whitesmoke;
+    flex-grow: 1;
+    display: grid;
+}
+
+.content {
+    width: auto;
+    height: auto;
+    margin: 30px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contentBox {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    /* background-color: gold; */
+    text-align: start;
+}
+
+.contentBox a {
+    text-decoration: none;
+    color: black;
+}
+
+.oneS {
+    width: 100%;
+    height: 34%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+

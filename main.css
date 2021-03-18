@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.page-container {
+    margin: 0;
+    padding: 2px;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	background:rgb(8, 196, 196);
+	padding: 8px 16px;
+	z-index: 1;
+}
+
+.header__logo {
+    height: 64px;
+    width: 64px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(196, 196, 196);
+}
+
+.header__navigation {
+    width: calc(100% - 100px);
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.navigate-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigate-link {
+    display: inline-block;
+	margin: 0 8px;
+}
+
+.navigate-link a {
+	text-decoration: none;
+    color: white;
+    transition: all ease 800ms;
+}
+
+.navigate-link a:active,
+.navigate-link a:hover {
+    color: rgb(196, 196, 196);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(196, 196, 196);
+}
+
+.container {
+    position: relative;
+    top: 135px;
+    height: auto;
+    text-align: center;
+    color:rgb(196, 196, 196);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(8, 196, 196);
+    
+}
+
+.footer__navigate-links {
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+}
+
+.footer-link {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.footer-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link a:active,
+.footer-link a:hover {
+    color:rgb(196, 196, 196);
+}
+
+.dev-icon {
+    height: 24px;
+    width: 40px;
+    background-color: white;
+    color: rgb(8, 196, 196);
+    font-size: 1.1em;
+    font-weight: 900;
+    line-height: 28px;
+}

@@ -1,0 +1,55 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
+function App() {
+const date = new Date();
+const hours = date.getHours();
+let timeOfDay;
+
+if (hours < 12) {
+	timeOfDay = "Morning";
+} else if (hours >= 12 && hours < 17) {
+	timeOfDay ="Afternoon";
+} else {
+	timeOfDay = "Night";
+}
+
+const stylesey = {
+color: "#f00";
+fontSize: "200px"; 	//convert the units into a string to be recognized
+backgroundColor: #0f0;	 		//in JS there are no keywords with hyphen, instead, we use camelCase
+};
+return (<h1 style={stylesey}> Good {timeOfDay}! </h1>);	//to change styles in JSX, the JSX styles property unlike CSS, it expects it to be a JS object
+}
+
+ReactDOM.render(<App />, document.getElementById("root"))
+
+
+CHECK SECOND APP BELOW
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+function App() {
+const date = new Date();
+const hours = date.getHours();
+let timeOfDay;
+const stylesey = {
+	fontSize: 30; 		//it is not compulsory to put the units if so, make it a string
+}
+
+if (hours < 12) {
+	timeOfDay = "Morning";
+	stylesey.color = "#f00";     			//inline styles allows for dynamic styling
+} else if (hours >= 12 && hours < 17) {
+	timeOfDay ="Afternoon";
+	stylesey.color = "#0f0";
+} else {
+	timeOfDay = "Night";
+	stylesey.color = "#00f";
+}
+
+return (<h1 style={stylesey}> Good {timeOfDay}! </h1>);	//to change styles in JSX, the JSX style property unlike CSS, it expects it to be a JS object
+}
+
+ReactDOM.render(<App />, document.getElementById("root"))

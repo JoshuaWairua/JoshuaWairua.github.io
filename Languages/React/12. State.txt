@@ -1,0 +1,81 @@
+{/*state is the data that the component maintains(it can change it's value)*/}
+{/*props cannot be changed by the component recieving the props (props are immutable)*/}
+{/*state can only be used by Class-based components*/}
+{/*you need a constructor (specific built in method that initializes parts of the class) method to use state*/}
+
+import React from 'react';
+
+class App extends React.Component {
+	constructor() {
+		super()					{/*you need to call the super() method when using a constructor function*/}
+		this.state = {
+			"answer": "yes"
+		};					{/*giving an initial value to the state. This is the data that the component will have when it is initialized*/}
+	}				{/*you need a constructor to initialize state*/}
+	render() {
+		return (
+			<div> 
+				<h1> 
+					Is state important to know? {this.state.answer}
+					<CHILDComponent answer={this.state.answer}/>
+				</h1>
+			</div>
+		);
+	}
+}
+
+export default App;
+
+
+{/*you can only change the state using the setstate method but NOT in the . React will then automatically update every child component that recieves part of that state*/}
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>STATE PRACTICE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>!<<<<<<<<<
+
+import React from "react";
+
+class App extends React.Component {
+	constructor() {
+		super()
+		this.state = {
+			"name": "Joshua",
+			"age": 24
+		};				{/*initializing the state*/}
+	}
+	render() {
+		return (
+			<div> 
+				<h1> {this.state.name} </h1> 
+				<h3> {this.state.age} years old </h3>
+			</div>
+		);
+	}
+
+}
+
+export default App;
+
+
+>>>>>>>>>2<<<<<<<<<<
+import React from "react";
+
+class App extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			"logged": true,
+		}
+	}
+	render() {
+		let status = this.state.logged ? "in" : "out";  		
+		return (
+			<div> 
+				<h1> You are currently logged {status}</h2>		{/*status is a local variable to the render method hence we don't access it using the this.state keywords since it is neither a prop nor a state*/}
+			</div>
+		);
+	}
+}
+
+export default App;

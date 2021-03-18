@@ -1,0 +1,37 @@
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    position: relative;       /**/
+  }
+  
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.parent .child-3 {
+  position: absolute;             /*the positioning context of this element is the closest (NOT the default static) positioned anscestor which is the 'parent' div that has the 'relative' position value. In other cases, if all the adjacent parents have the default positioning not changed, then the element will have the HTML as its positioning context. The absolute position takes the element out of the document flow */
+  margin: 0;
+  top: 0;
+  left: 0;
+}

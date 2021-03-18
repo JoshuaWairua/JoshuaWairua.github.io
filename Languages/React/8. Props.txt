@@ -1,0 +1,140 @@
+//props in React are like the html element attributes i.e., the 'src' attribute in the image element, the 'href' attribute in the anchor element, the 'placeholder', 'name', 'type' attributes of the input element
+//the image, input, and anchor elements need (required) those attributes in order to function correctly
+//since in React we are creating our own components, we (unlike HTML elements that have inbuilt/predefined attributes/properties) will also define the props of the component that will modify the actions of the component itself
+//Reusable components
+
+>>>>>>>index.js<<<<<<<<
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render(<App />, document.selectElementById("root"));
+
+
+
+
+>>>>>App.js<<<<<
+
+import React from "react";
+import ContactCard from "./components/ContactCard";
+
+
+function App() {
+	return (
+		<div className="contacts"> 
+			<ContactCard
+				contact={{imgurl="htt....1", name="Josh", phone="0724", email="josh@mail"}}		//The ContactCard component is passing  an object 'contact' that has the properties we want. 'name', 'email'... are props for the individual components. they enable variance
+			/>
+			<ContactCard
+				contact={{imgurl="htt....2", name="Dad", phone="0725", email="Dad@mail"}}	 	//hardcodiung the properties in the 'contact' object
+			/>
+			<ContactCard
+				contact={{imgurl="htt....3", name="Mom", phone="0723", email="Mom@mail"}}	 
+			/>
+			<ContactCard
+				contact={{imgurl="htt....4", name="Yvonne", phone="0799", email="Yvonne@mail"}}
+			/>
+
+		</div>
+	);
+}
+
+export default App;
+
+
+
+
+
+>>>>>ContactCard.js<<<<<<<<
+
+import React from "react";
+
+function ContactCard(props) {			//the function takes a paramenter called props (can be any name, but props is used conventionally). Props is an object that has properties of that object. Each being a name of the prop you passed in i.e., name: "josh"
+	//console.log("prop: ", props);  			//to view the number of instances of the components and their props
+	return (
+		<div className="contactCard"> 
+			<img src={props.contact.imgurl}/>		//remember to use curly braces when using JS in JSX
+			<h1> {props.contact.name}</h1>
+			<p>Phone: {props.contact.phone} </p>
+			<p> Email: {props.contact.email} </p>			//props.contact is an object that has properties like 'imgurl', 'name', and 'email'
+		</div>
+	);
+}
+
+export default ContactCard;
+
+
+
+
+
+>>>>>>>style.css<<<<<<<
+body{}
+
+.contacts{}
+
+.contactCard{}
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PROPS AND STYLING PRACTICE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+>>>>>>index.js<<<<<<
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.selectElementById("root"));
+
+
+
+>>>>>>App.js<<<<<<<
+import React from 'react';
+import Joke from "./components/Joke";
+
+function App() {
+	return (
+		<div> 
+			<Joke 
+				notes={{punchline="punch0"}} 		//the 'question: ' in the paragraph element will not appear because of the conditional logic used by the ternary operator in the Joke component file
+			/>
+			<Joke 
+				notes={{question="qn1", punchline="punch1"}}
+			/>
+			<Joke 
+				notes={{question="qn2", punchline="punch2"}}
+			/>
+			<Joke 
+				notes={{question="qn3", punchline="punch3"}}
+			/>
+			<Joke 
+				notes={{question="qn4", punchline="punch4"}}
+			/>
+			<Joke /> 		//React will not display anything because the props are null/undefined
+		</div>
+	);
+}
+
+export default App;
+
+
+
+>>>>>>Joke.js<<<<<<<
+import React from 'react';
+
+function Joke(props) {
+	return (
+		<div>
+			<p style={{display: props.question ? "block" : "none"}}>Question: {props.notes.question}<p> 		//using a ternary operator to display the 'question: ' in the paragraph element when there is a 'question' prop and to display nothing if there is no  'question prop'
+			<p style={{color: props.question ? "black" : "grey"}}>Punchline: {props.notes.punchline}<p>		//punchlines that do not have a question will be grey in color
+			<hr>
+ 
+		</div>
+	);
+}
+export default Joke;

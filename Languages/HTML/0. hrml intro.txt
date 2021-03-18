@@ -1,0 +1,1 @@
+NarkUp element is a set of tags (e.g. body tag), that have something inside i.e., <body> something inside.... </body>

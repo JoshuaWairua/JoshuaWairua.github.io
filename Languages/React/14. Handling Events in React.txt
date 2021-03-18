@@ -1,0 +1,18 @@
+import React from "react";
+
+function whenClicked() {
+	console.log("i was clicked")
+}
+
+function App() {
+return (
+	<div> 
+		<img onMouseOver={() => console.log("hoered!")}src="#">		//andling events. Events in JSX are written in camel case. You do not call the function instead you name the function
+		</br>
+		</br>
+		<button onClick={whenClicked}> Click Me</button>		{/*another event*/}
+	</div>
+	);
+}
+
+export default App;

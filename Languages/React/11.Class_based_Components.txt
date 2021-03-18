@@ -1,0 +1,119 @@
+//Functional components are sometimes limited to what we might want to do 
+//converting functional components to Class components
+
+import React from 'react';
+{/*
+function App(props) {
+	return (
+		<div>
+			<p> Write your code here {props.whareva} </p> 
+		</div>
+	);
+}
+
+the functional component above is the same as the Class component below
+*/}
+
+class App extends React.Component {
+	//Class methods are written before the render method
+	
+	yourMethodHere() {
+		//your display logic
+	}
+	
+	render() {
+		//it is best to write your logic and your styles before the return statement
+		const date = new Date();
+		const style = this.yourMethodHere(); 		//call the method before the return statement. If the method returns something then store it in a variable. i.e., 'const style'
+		return (
+			<div>
+				<p> Write your code here</p>
+				<p> Today's date is {date}</p> 
+				<p> {this.props.whareva} </>		//in class based components, you have to use the 'this' keyword to access props
+			</div>
+		);
+	}
+}
+
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CLASS-BASED COMPONENTS PRACTICE<<<<<<<<<<<<<<<<<<<
+
+>>>>>>>>1<<<<<<<<<<<
+import React from "react";
+import Header from "./components/Header";
+import Greetingfrom "./components/Greeting";
+
+Class App extends React.Component {
+	render() {
+		return (
+			<div>
+				<Header usrname="Joshua"/>		//passing props to avoid displayng undefined
+				<Greeting />
+			</div>
+		);
+	}
+}
+
+export default App;
+
+
+
+>>>>>>>>>>>2<<<<<<<<<<
+import React from "react"; 
+
+Class Header extends React.Component {
+	render() {
+		const username = "Josh";
+		return (
+			<header> 
+				<p> Welcome, {this.props.username} </p>			//the functional component was using props hence the use of the 'this' keyword
+			</header>
+
+		);
+	}
+}
+
+export default Header;
+
+
+
+>>>>>>>>>>3<<<<<<<<<<<
+import React, { Component } from "react";		//importing React and Component
+
+Class Greeting extends Component {
+	render() {
+		const date = new Date();
+		const hours = date.getHours();
+		let timeOfDay;
+
+		if (hours <12) {
+			timeOfDay = "Morining";
+		} else if (hours >= 12 && hours < 17) {
+			timeOfDay = "Afternoon"
+		} else {
+			timeOfDay = "Night"
+		}
+		return (
+			<div> 
+				<p> Good {timeOfDay} Sir! </p> 		//the funcitonal component was not using props so there is no need for the use of the 'this' keyword
+			</div>
+		);
+	}
+}
+export default Greeting;

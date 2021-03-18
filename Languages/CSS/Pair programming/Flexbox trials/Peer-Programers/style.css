@@ -1,0 +1,198 @@
+
+
+body{
+    background: white;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+    width: 100%;
+    
+}
+
+.nav{
+  width: 100%;
+  height: 56px;
+  background: white;
+  padding: 0 2rem;
+  /* display all the main 3 sections with space in between  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+#sidebar {
+    position: absolute;
+    background: white;
+    left: -300px;
+    
+   
+}
+#sidebar span a {
+  padding-left: 12%;
+  text-decoration: none;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar ul li {
+    list-style: none;
+    color: black;
+    font-size: 13px;
+    padding: 20px 24px;
+    font-family: Roboto;
+    
+}
+
+.iconify {
+  margin-right: 24px;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+
+.nav .nav-section:first-child {
+    padding-left: 39px;
+    margin-top: 19px;
+    font-size: 26px;
+    color: red
+}
+
+.nav .nav-section:first-child a {
+  text-decoration: none;
+  color: #666;
+  margin-right: 2rem;
+  font-size: 1.3rem;
+}
+
+.nav .nav-section:first-child a span {
+  color: red;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.nav .nav-section:first-child a b {
+  font-size: 1.5rem;
+}
+
+.nav .nav-section:nth-child(2) {
+  padding-left: 56px;
+  margin-top: 19px;
+  font-size: 20px;
+}
+
+.nav .nav-section:nth-child(2) form {
+  width: 567px;
+  height: 35px;
+  position: relative;
+  font-size: 17px;
+  /* style the search button */
+}
+
+.nav .nav-section:nth-child(2) form input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #999;
+  padding-left: 1rem;
+  border-radius: 2px;
+}
+
+.nav .nav-section:nth-child(2) form button {
+  /* place the
+. button on top of the input on the right */
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 70px;
+  height: calc(100% - 2px);
+  /* align the search icon at the center of the button vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-left: 1px solid #999;
+  background: whitesmoke;
+}
+
+.nav .nav-section:nth-child(3) {
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+.nav .nav-section:nth-child(3) a {
+  text-decoration: none;
+  color: #666;
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+
+.grid {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: stretch;
+    }
+  
+  .grid > article {
+    border: 1px solid #ccc;
+   
+    border-radius: 3px;
+    text-align: center;
+  }
+  
+  
+  .grid > article img {
+    width: 30%;
+  }
+  
+  
+  .text {
+    padding: 0 20px 20px;
+  }
+  
+  .text > h3{
+    text-transform: uppercase;
+  }
+  
+  .text > button {
+    background: linear-gradient(to right, #f030a7, #f0308d, #f03061);
+    border-radius: 3px;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    text-transform: uppercase;
+  }
+  
+  
+  @media (max-width: 768px){
+    .grid{
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 500px){
+    .grid{
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0;
+    }
+  
+    .grid > article{
+      text-align: center;
+    }
+  }
+
+
+
+
+

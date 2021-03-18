@@ -1,0 +1,89 @@
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("../images/plans-background.jpg");
+    z-index: -1;                /*z-index is applicable to ONLY elements taht have the position property*/
+}               /*the background div is placed above the main-header div so if both of their z-index values are the same, the main-header will overlap it because of the fixed property*/
+
+main {
+    padding-top: 32px;
+}
+
+.package {
+    position: relative;         /*relative positioning is useful so that the 'package__badge' child element can have this as the positioning context when it has absolute positioning*/
+    margin: 16px 0;
+    border: 3px solid #0e4f1f;
+    border-left: none;
+    width: 80%;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-color: #ff5454;
+}
+
+.package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 32px;
+}
+
+.package__badge {
+    position: absolute;                 /*the positioning context of this element is the closest (NOT the default static) positioned anscestor which is the 'package' section that has the 'relative' position value.*/
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 12px;
+    color: white;
+    background: #ff5454;
+    padding: 8px;
+}
+
+.package__subtitle {
+    color: #797979;
+}
+
+.package__info{
+    margin: 0;
+    border: 1px solid #0e4f1f;
+    padding: 16px;
+    color: #0e4f1f;
+    font-size: 16px;
+    background: white;
+}
+
+#plus {
+    background: rgba(213, 255, 220, 0.95);
+}
+
+#free {
+    background: rgba(234, 252, 237, 0.95);
+    float: right;                   /*float takes that element out of the document flow*/
+    border-right: none;
+    border-left: 3px solid #0e4f1f;
+    text-align: right;
+}
+
+#free:hover,
+#free:active {
+    border-left-color: #ff5454;
+}
+
+.clearfix {
+    clear: both;      /*It is a hacky way to clear the float property applied to the previous div above it. elements that come after the div will not respect the floats previously applied*/
+}
+
+#premium {
+    background: rgba(14, 79, 31, 0.95);
+}
+
+#premium .package__title {
+    color: white;
+}
+
+#premium .package__subtitle {
+    color: #bbb;
+}
