@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fav-icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title> Honey </title>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="hdr-img-container">
+            <img src="../Product-landing-page/gallery/logo.png" alt="company logo" id="header-img" width="40" height="40">
+        </div>
+        <h1> Arsalley </h1>
+        <nav id="nav-bar">
+            <ul id="nav-links">
+                <li> <a class="nav-link" href="#products"> Products </a> </li>
+                <li> <a class="nav-link" href="#gallery"> Gallery </a> </li>
+                <li> <a class="nav-link" href="#pricing"> Pricing </a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2> Our Products </h2>
+            <div class="product-card">
+                <div class="prdct-img-container"> <img src="../Product-landing-page/gallery/honey.jpg" alt="honey" class="prdct-img"> </div>
+                <p class="prdct-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate nisi, ullam fuga itaque magnam quam omnis voluptas a rem. Assumenda earum molestiae nam ducimus incidunt adipisci quis nulla fuga. </p>
+            </div>
+            <div class="product-card">
+                <div class="prdct-img-container"> <img src="../Product-landing-page/gallery/honey-jar.jpg" alt="honey jar" class="prdct-img"> </div>
+                <p class="prdct-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate nisi, ullam fuga itaque magnam quam omnis voluptas a rem. Assumenda earum molestiae nam ducimus incidunt adipisci quis nulla fuga. </p>
+            </div>
+            <div class="product-card">
+                <div class="prdct-img-container"> <img src="../Product-landing-page/gallery/honey-dipper.jpg" alt="honey dipper" class="prdct-img"> </div>
+                <p class="prdct-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate nisi, ullam fuga itaque magnam quam omnis voluptas a rem. Assumenda earum molestiae nam ducimus incidunt adipisci quis nulla fuga. </p>
+            </div>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <label for="email"> Want to be the first to know when we have offers? Enter your email below. </label>
+                <input type="email" name="email" id="email" placeholder="Email" required> 
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </section>
+        <section id="gallery">
+            <h2> Gallery </h2>
+            <div class="vid-container">
+                <video id="video" controls>
+                    <source src="../Product-landing-page/gallery/video.mp4" type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+            </div>
+        </section>
+        <section id="pricing">
+            <h2> Our Prices </h2>
+            <div id="prices">
+                <div class="price-card">
+                    <div class="prdct-img-container"> <img src="../Product-landing-page/gallery/honey.jpg" alt="honey" class="prdct-img"> </div>
+                    <p class="prdct-name"> Honey </p>
+                    <p class="prdct-price"> Kshs 300/ Kg </p>
+                </div>
+                <div class="price-card">
+                    <div class="prdct-img-container"> <img src="../Product-landing-page/gallery/honey-jar.jpg" alt="honey jar" class="prdct-img"> </div>
+                    <p class="prdct-name"> Storage </p>
+                    <p class="prdct-price"> from Kshs 100 - 300 </p>
+                </div>
+                <div class="price-card">
+                    <div class="prdct-img-container"> <img src="../Product-landing-page/gallery/honey-dipplastic.jpg" alt="honey dipper" class="prdct-img"> </div>
+                    <p class="prdct-name"> Honey dippers </p>
+                    <p class="prdct-price"> Kshs 150 - 250 </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p class="footer-details">
+            Wairua &#169; 
+        </p>
+    </footer>
+</body>
+</html>

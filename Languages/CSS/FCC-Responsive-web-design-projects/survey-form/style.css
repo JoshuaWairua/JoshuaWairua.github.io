@@ -1,0 +1,49 @@
+body {
+    background-color: rgba(38, 23, 88, 0.79);
+    color: #f3f3f3;
+    margin: 0;
+  }
+  #form-container {
+    padding: 24px 56px;
+  }
+  
+  #title, #description {
+    text-align: center;
+  }
+  
+  #survey-form {
+    margin: 0 auto;
+    width: 65%;
+    padding: 16px;
+    background-color: rgba(27, 27, 50, 0.8);
+  }
+  
+  fieldset {
+    border: none;
+  }
+  #personal input {
+    width: 100%;
+    padding: 8px;
+  }
+  
+  #dropdown {
+    display: block;
+    width: 100%;
+    padding: 8px;
+  }
+  
+  .radiobtns, .checkbtns {
+    display: block;
+  }
+  
+  #comment {
+    width: 100%;
+  }
+  
+  #submit {
+    width: 100%;
+    padding: 8px;
+    background-color: #37af65;
+    color: inherit;
+    font-size: 1.2rem;
+  }
