@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+}
+
+#page-container {
+    background-color: aqua;
+    margin: 0;
+}
+
+#navbar {
+    /* background-color: cornsilk; */
+    position: fixed;
+    min-width: 30vw;
+}
+
+#nav-header h1{
+    /* background-color: white; */
+    height: 10vh;
+    margin: 0;
+    padding: 8px;
+}
+
+#nav-links {
+    /* background-color: yellow; */
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    list-style: none;
+    overflow-y: scroll;
+}
+
+#nav-links li {
+    /* background-color: blueviolet; */
+    border-top: 1px solid black;
+    min-width: 100%;
+    padding: 16px;
+}
+
+.nav-link {
+    /* background-color: hotpink; */
+    display: block;
+    text-decoration: none;
+    color: green;
+    font-size: 1.2em;
+}
+
+#main-doc {
+    /* background-color: darkgoldenrod; */
+    position: absolute;
+    margin-left: 30vw;
+    padding: 8px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section ul, code {
+    align-self: center;
+    width: 80%;
+}
+
+code {
+    background-color: lightgrey;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: .8em;
+}
+
+@media (max-width: 800px) {
+    #navbar {
+        background-color: white;
+        width: 100vw;
+        height: 40vh;
+        z-index: 2;
+    }
+    #nav-links {
+        height: 30vh;
+    }
+    #main-doc {
+        margin: 40vh 0 0 0; 
+        z-index: 1;
+    }
+}
