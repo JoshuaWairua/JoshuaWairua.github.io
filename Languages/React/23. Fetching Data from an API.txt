@@ -1,0 +1,34 @@
+import React, {Component} from "react";
+
+class App extends Component {
+	constructor() {
+		super();
+		this.state = {
+			"loading": false,
+			"character": {}
+		}
+	}
+
+	componentDidMount() {
+		this.setState({"loading": true});
+		fetch("https://swapi.co/api/people/1")
+			.then(response => response.json())
+			.then(data => {
+				this.setState({
+					"loading": false,
+					"character": data
+				})
+			})
+	}				{/*componentDidMount is like a hook in our React component that allows us to run some code  immediately after the component first mounts to the DOM. Its most common use is to get data from somewhere so that your component can do what it's supposed to do */}
+
+	render() {
+		const text = this.state.loading ? "loading..." : this.state.character.name;
+		return (
+			<div> 
+				{text}	
+			</div>
+		);
+	}
+}
+
+export default App;

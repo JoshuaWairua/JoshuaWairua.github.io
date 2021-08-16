@@ -1,0 +1,43 @@
+{/**/}
+import React, {Component} from "react";
+
+class App extends Component {
+	constructor() {
+		super()
+		this.state = {}
+	}
+
+	componentDidMount() {
+		{/*second lifecycle method that is defined like any other object in the class. It is ran by React when the component is first showing up. It does not rerun when render method reruns (it's like a baby being born)*/}
+	} 	
+
+	componentWillRecieveProps(nextProps) {
+		{/*another lifecycle method that runs every time a component recievies a prop from a parent component  (it's like when someone gives you a gift)*/}
+		{/*there will be mostly an if statement that compares the next property to the current property
+			if (nextProps.blabla !== this.props.blable) {
+				do something
+			}
+		*/}
+	}
+	
+	shouldComponentUpdate(nextProps, nextState) {
+		{/*another lifecycle method (it's like deciding whether you need to change your clothes or not; check analogy for render method)*/}		
+		{/*we should return true if we want to update, otherwise, return false*/}
+	}
+
+	componentWillUnmount() {
+		{/*another lifecycle method describes how the component will unmount from the screen (it's like the description of someone's death)*/}
+		{/*it is the place to tear down or clean up your code before your component disappears i.e., when removing an event listener*/}
+	}
+	
+	render() {
+		return (
+			<div> 
+				Code goes here
+			</div>
+		);
+	} 		{/*the first lifecycle method is the render method shows what is supposed to be displayed to the world. The render method can be called many times when props or state changes affect how components display (it's like changing clothes of a person for different events)*/}
+}
+
+{/*every React component created goes through a series of phases/milestones during its time being alive in the React app (analogous to a baby being born has phases and milestones to reach)*/}
+

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Roboto+Slab&display=swap');
+body {
+    font-family: 'Josefin Sans', sans-serif;
+   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s ease;
+}
+.content-row1{
+    display: inline-flex;
+    height: auto;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.content-row2{
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+}
+.content-row3{
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sidebar{
+    z-index: 10;
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    transition: all .5s ease;
+    overflow-x: hidden;
+}
+
+
+.sidebar header{
+    font-family: Roboto,sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    line-height: 70px;
+    background: white;
+    user-select: none;
+}
+.sidebar ul{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 53px;
+    font-size: 15px;
+    color: white;
+    padding: 0;
+    box-sizing: border-box;
+    
+    border-bottom: 1px solid
+     rgb( 232, 232, 232);
+    transition: .4s;
+}
+.sidebar ul li a{
+    font-family: Roboto,'Noto Sans',sans-serif;
+    color: grey;
+    padding: 20px;
+}
+.sidebar ul>li>a span{
+    padding: 0 0.4rem 0 0;
+}
+
+ul li:hover {
+    background: lightgray;
+}
+.sidebar ul a i{
+    left: 10px;
+}
+#check{
+    display: contents;
+}
+label #btn{
+    position: absolute;
+    cursor: pointer;
+    background: white;
+    border-radius: 3px;
+}
+label #btn{
+    z-index: 30;
+    left: 10px;
+    top: 20px;
+    font-size: 25px;
+    color:grey;
+    padding: 6px 12px;
+    transition: all .5 ease;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 10px;
+    top: 20px;
+}
+#check:checked ~ .container{
+    margin-left: 250px;
+}
+.sidebar header{
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1111;
+    left: 90px;
+    top: 0;
+    padding: 6px 12px;
+    transition: all .5 ease; 
+}
+.sidebar .six a{
+    color: grey;
+}
+.sidebar .six{
+    padding: 10px 20px;
+}

@@ -1,0 +1,38 @@
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+    overflow: auto;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    overflow: hidden;   /*When you want to hide the display of elements that overflow the body element then you also have to declare the hidden/auto overflow property to the html element for it to work*/
+  }
+  
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    overflow: hidden;           /*the hidden overflow is a countermeasure to avoid the dispaly of child elements that have positioned themselves outside the parent element itself*/
+  }
+  
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.parent .child-1 {
+  position: relative;         /*the positioning context is the element itself. It is also NOT taken out of the document flow, but you can move the element  out of the parent element*/
+  top: 30px;
+  left: 90px;
+}

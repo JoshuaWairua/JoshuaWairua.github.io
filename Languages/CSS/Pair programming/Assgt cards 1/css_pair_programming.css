@@ -1,0 +1,64 @@
+html {
+    height: 100%;
+}
+
+
+
+body {
+    background-image: url("image2.jpg");  
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%; 
+}
+
+img {
+    border-radius: 50%;
+    float: left;
+}
+
+
+
+div.fixed1 {
+    position: fixed;
+    /*right border*/
+    width: 89.7%;
+    /*top border*/
+    height: 53%;
+/*because of the heights of both footer and div.fixed 2*/
+    bottom: 25%;
+    left:0%;
+    padding: 5%;
+    border: 1px solid none;
+    
+    
+}
+/* dont know yet what to do*/
+
+div.fixed2 { 
+    position: fixed;
+/*right border*/
+    width: 99.7%;
+    height: 15%;
+    /*because of footer height*/
+    bottom: 10%;
+    left:0%;
+    background-color: rgb(39, 7, 39);
+    border: 1px solid none;
+   
+
+
+ 
+}
+
+
+
+footer {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height:10%;
+    background-color: white;
+    text-align: center;
+
+}

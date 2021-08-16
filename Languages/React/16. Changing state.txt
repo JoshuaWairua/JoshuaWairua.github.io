@@ -1,0 +1,56 @@
+import React from "react";
+
+class App extends React.Component {
+	constructor() {
+		super()
+		this.state = {
+			"count": 0
+		}
+		this.handleClick = this.handleClick.bind(this); 		{/*binding the handleClick function to the constructor so that it can work/know its context in regard to 'this' (this is 'kind of a hack' to get the event handler function to work in React)*/}
+	}
+	handleClick() { 
+		this.setState({"count": 1}) 		{/*use the setState method to change state. you pass in an object (when you don't care about the previous state) to the method because state is an object*/}
+	}
+	render() {
+		return (
+			<div> 
+				<h1>{this.state.count}</h1>
+				<button onClick={this.handleClick}>Change </button>			{/*adding an event handler to the button that changes the value of the counter*/}
+			</div>
+		);
+	}
+}
+
+export default App;
+
+
+{/*
+import React from "react";
+
+class App extends React.Component {
+	constructor() {
+		super()
+		this.state = {
+			"count": 0
+		}
+		this.handleClick = this.handleClick.bind(this); 		{/*binding the handleClick function to the constructor so that it can work/know its context in regard to 'this' (this is 'kind of a hack' to get the event handler function to work in React)*/}
+	}
+	handleClick() { 
+		this.setState(previousState => {
+`			return (
+				count: previousState.count + 1;
+			);
+		}) 		{/*use the setState method to change state. you pass in a function (when you care about the previous state) to the method because state is an object*/}
+	}
+	render() {
+		return (
+			<div> 
+				<h1>{this.state.count}</h1>
+				<button onClick={this.handleClick}>Change </button>			{/*adding an event handler to the button that changes the value of the counter*/}
+			</div>
+		);
+	}
+}
+
+export default App;
+*/}

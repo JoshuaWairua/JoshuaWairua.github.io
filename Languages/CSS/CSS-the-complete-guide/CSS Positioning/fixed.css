@@ -1,0 +1,42 @@
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.parent .child-1 {
+  position: fixed;          /*has the positioning context of the viewport. It also takes the div out of the document flow*/
+  top: 0;
+  left: 0;                  /*top and left properties are needed here because of the marins set in the HTML element abd the other parent elements of the div*/
+  margin: 0;                 /*overrides the margin properties set for the divs above*/
+  box-sizing: border-box;    /* for the margin-right to show*/
+  width: 100%;
+  z-index: 1;
+}
+
+/* the use of z-index is only applicable on elements that have a position property different from static */
+

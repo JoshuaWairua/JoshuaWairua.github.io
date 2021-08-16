@@ -1,0 +1,153 @@
+
+
+
+
+
+
+
+>>>>index.js<<<<<< 		//main file
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render(<App />, document.selectElementById("root"))
+
+
+>>>>>>App.js<<<<<<<<<< 		//main component file
+import React from "react";
+import TodoItemfrom "./components/TodoItem";
+import todosData from "./todosData";
+
+class App extends React.Component {
+	constructor() {
+		super()
+		this.state = {
+			todos: todosData
+		};
+		this.handleChange = this.handleChange.bind(this);
+	}
+	handleChange(id) {
+		this.setState(prevState => {
+			const updatedTodos = prevState.todos.map(todo => {
+				if (todos.id === id) {
+					todo.completed = !todo.completed
+				}
+				return todo;
+			})
+			return {
+				"todos": updatedTodos
+			}
+		})
+	}
+	render() {
+		const todoItemComponents = this.state.todos.map(item => <TodoItem key={props.id} todoItem={item} handleChange={this.handleChange}/>)
+		return (
+			<div className="todo-list">
+				{todoItemComponents}
+			</div>
+		);
+	}
+}
+export default App;
+
+
+>>>>>>TodoItem.js<<<<<<<<<< 		//TodoItem component file
+import React from "react";
+
+function TodoItem(props) {
+	return (
+		<div className="todo-item"> 
+			<input 
+				type="checkbox" 
+				onChange={() => props.handleChange(props.item.id)}
+				checked={props.item.completed}
+			/> 		{/*adding an event to the input element but it does not change the state*/}	
+			<p style={{textDecoration: completed ? "lineThrough" : "none"}}> {props.item.placeholder}</p>
+		</div>
+	);
+}
+export default TodoItem;
+
+
+
+
+>>>>>>>>todosData.js<<<<<<<<
+const todosData = [
+	{
+		"id": 1,
+		"text": "Take: out the trash",
+		"completed": true
+	},
+	{
+		"id": 2,
+		"text": "Shop: for groceries",
+		"completed": false
+	},
+	{
+		"id": 3,
+		"text": "Clean: room",
+		"completed": false
+	},
+	{
+		"id": 4,
+		"text": "Mow: lawn",
+		"completed": true
+	},
+	{
+		"id": 5,
+		"text": "Cacth: up on React",
+		"completed": false
+	}
+];
+export default todosData;
+
+
+
+
+
+>>>>>>>style.css<<<<<<< 		//stylesheet
+body {
+background-color: whitesmoke;
+}
+
+.todo-list{
+background-color: white;
+margin: auto;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 1px solid #0f0f0f;
+box-shadow: 
+	/*the top layer shadow*/
+	1px 1px rgba(0, 0, 0, 0.15),
+	/*the second layer*/
+	10px 0 -5px #000,
+	/*the second layer shadow*/
+	10px 1px -4px rgba(0, 0, 0, 0.15),
+	/*the third layer*/
+	20px 0 -10px #000,
+	/*the third layer shadow*/
+	20px 10px -9px rgba(0, 0, 0, 0.15);
+padding: 30px;
+}
+
+.todo-item{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px 20px 0;
+width: 70%;
+border-bottom: 1px solid darkgrey;
+font-family: Roboto, sans-serif;
+font-weight: 300;
+font-size: 15px;
+color: #333;
+}
+
+input {
+margin-right: 18px;
+}
+
+
+

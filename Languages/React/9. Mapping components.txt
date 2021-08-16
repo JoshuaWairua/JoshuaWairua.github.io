@@ -1,0 +1,158 @@
+>>>>>>index.js<<<<<<
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.selectElementById("root"));
+
+
+
+>>>>>>App.js<<<<<<<
+import React from 'react';
+import Joke from "./components/Joke";
+import jokesData from "./jokesData" 			//this is an array of the jokes
+
+function App() {
+	const jokeComponents = jokesData.map((joke) => {
+		return (<Joke 
+				key={joke.id}		//React required the 'key' prop after iteration of components and the key value should be unique like an "id"
+				question={joke.question} 
+				punchline={joke.punchline} 
+			/>);
+	}); 		//using the map() method on the jokesData array to return a new array of Joke components //you can remove the brackets from the parameter, the return statement abd the curly braces
+	return (
+		<div> 
+			{jokeComponents}		
+		</div>
+	);
+}
+
+export default App;
+
+
+
+>>>>>>Joke.js<<<<<<<
+import React from 'react';
+
+function Joke(props) {
+	return (
+		<div>
+			<p style={{display: props.question ? "block" : "none"}}>Question: {props.question}<p> 		//using a ternary operator to display the 'question: ' in the paragraph element when there is a 'question' prop and to display nothing if there is no  'question prop'
+			<p style={{color: props.question ? "black" : "grey"}}>Punchline: {props.punchline}<p>		//punchlines that do not have a question will be grey in color
+			<hr>
+ 
+		</div>
+	);
+}
+export default Joke; 
+
+
+>>>>>>>>>jokesData.js<<<<<<<<
+const jokesData =[
+	{id=1, punchline="punch0"}, 		//the 'question: ' in the paragraph element will not appear because of the conditional logic used by the ternary operator in the Joke component file
+	{id=2, question="qn1", punchline="punch1"}, 		//giving the object a unique id because of the REQUIRED 'key' prop when iterating over components
+	{id=3, question="qn2", punchline="punch2"}, 
+	{id=4, question="qn3", punchline="punch3"}, 
+	{id=5, question="qn4", punchline="punch4"},
+	{id=6} 		//React will not display anything because the props are null/undefined
+];
+export default jokesData;
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MAPPING COMPONENTS PRACTICE<<<<<<<<<<<<<<<<<<<<<<
+
+>>>>index.js<<<<
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.selectElementById("root"));
+
+
+
+>>>>>>App.js<<<<<<<
+import React from 'react';
+import Product from "./components/Product";
+import  productsData from "./vschoolProducts" 			//this is an array of the jokes
+
+function App() {
+	const productComponents = productsData.map(item => <Product key={item.id} product={item} />) 		//creates an array called productComponents that has Product Component elements
+	return (
+		<div> 
+			{productComponents}		
+		</div>
+	);
+}
+
+export default App;
+
+
+
+>>>>>>>>>Product.js<<<<<<
+
+import React from 'react';
+
+function Product(props) {
+	return (
+		<div> 
+			<p>id: {props.product.id} </p> 			//props.product is a nested object that we want to pass as a whole object instead of passing down the individual properties one by one. We will access the properties through props.product...
+			<p>name: {props.name} </p> 
+			<p>price: Kshs.{props.price} </p>
+			<p>description: {props.description} </p>
+			<hr>
+		</div>
+	);
+}
+export default Product;
+
+
+
+>>>>>>>vschoolProducts.js<<<<<<<<
+
+const productsData=[
+	{
+		"id": "1", 
+		"name": "Pencil",
+		"price": 20,
+		"description": "perfect pencil"
+	},
+	{
+		"id": "2", 
+		"name": "Pen",
+		"price": 10,
+		"description": "perfect pen"
+	},
+	{
+		"id": "3", 
+		"name": "Rubber",
+		"price": 30,
+		"description": "perfect rubber"
+	},
+	{
+		"id": "4", 
+		"name": "Sharpener",
+		"price": 20,
+		"description": "perfect sharpener"
+	},
+	{
+		"id": "5", 
+		"name": "Ruler",
+		"price": 50,
+		"description": "perfect ruler"
+	},
+	{
+		"id": "6", 
+		"name": "Book",
+		"price": 35,
+	}
+];
+
+export default productsData;
+
+
+ 
